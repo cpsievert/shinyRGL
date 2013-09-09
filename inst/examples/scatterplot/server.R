@@ -20,4 +20,8 @@ shinyServer(function(input, output) {
              zPts[1:input$pts])
     axes3d()
   })
+  
+  output$basic <- renderPlot({
+    plot(xPts[1:input$pts], yPts[1:input$pts])
+  })
 })

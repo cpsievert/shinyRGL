@@ -21,6 +21,9 @@ shinyUI(pageWithSidebar(
   
   # Show the generated 3d scatterplot
   mainPanel(
-    webGLOutput("sctPlot")
+    tabsetPanel(id="tabs",
+                tabPanel("Tab1", plotOutput("basic")),
+                tabPanel("Tab2", webGLOutput("sctPlot"))
+    )
   )
 ))
